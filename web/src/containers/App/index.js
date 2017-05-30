@@ -8,8 +8,10 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div style={{ display: 'flex', flex: '1' }}>
           <Match exactly pattern="/" component={Home} />
+          <Match pattern="/login" component={Login} />
+          <Match pattern="/signup" component={Signup} />
           <Miss component={NotFound} />
         </div>
       </BrowserRouter>
